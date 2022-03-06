@@ -13,6 +13,7 @@ const setInnerText = (id, text) => {
 }
 const displayTemperature = temperature => {
     setInnerText('city', temperature.name);
+    setInnerText('country', temperature.sys.country);
     setInnerText('condition', temperature.main.temp);
     setInnerText('wether-helth', temperature.weather[0].main);
     console.log(temperature);
